@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'travelAdvisory.dart';
 import 'package:http/http.dart' as http;
 
 Future<Map<String, dynamic>> loadCountries() async {
