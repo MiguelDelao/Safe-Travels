@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:flutter/services.dart';
 import 'package:vaughn_s_application6/presentation/home_pg_screen/home_pg_screen.dart';
 import 'package:vaughn_s_application6/presentation/search_page_screen/search_page_screen.dart';
 import 'package:vaughn_s_application6/widgets/navbar.dart';
+=======
+import 'package:zeus/searchBar.dart';
+import 'logic.dart';
+>>>>>>> main
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,7 +23,22 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+<<<<<<< HEAD
   int currentIndex = 0;
+=======
+  int index = 0;
+  Map<String, dynamic> _map = Map<String, dynamic>();
+  @override
+  void initState() {
+    super.initState();
+
+    loadCountries().then((value) {
+      setState(() {
+        _map = value;
+      });
+    });
+  }
+>>>>>>> main
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +78,24 @@ class _MyAppState extends State<MyApp> {
             });
           },
         ),
+<<<<<<< HEAD
       ),
     );
+=======
+        home: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.black,
+            foregroundColor: Colors.white,
+            title: const Text("test"),
+          ),
+          body: Column(
+            children: [
+              SearchBar(
+                onSelect: (selected) => {print(selected)},
+              ),
+            ],
+          ),
+        ));
+>>>>>>> main
   }
 }

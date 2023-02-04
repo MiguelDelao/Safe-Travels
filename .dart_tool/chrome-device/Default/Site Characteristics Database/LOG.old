@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2023/02/04-15:13:06.094 2cfc Log #3: 4 ops saved to Table #7 OK
 2023/02/04-15:13:06.098 2cfc Archiving C:\Users\Miguel\AppData\Local\Temp\flutter_tools.72546657\flutter_tools_chrome_device.3e813039\Default\Site Characteristics Database/000003.log: OK
 2023/02/04-15:13:06.102 2cfc Log #6: 1 ops saved to Table #8 OK
@@ -7,3 +8,14 @@
 2023/02/04-15:13:06.104 2cfc Table #8: 1 entries OK
 2023/02/04-15:13:06.110 2cfc Archiving C:\Users\Miguel\AppData\Local\Temp\flutter_tools.72546657\flutter_tools_chrome_device.3e813039\Default\Site Characteristics Database/MANIFEST-000001: OK
 2023/02/04-15:13:06.118 2cfc **** Repaired leveldb C:\Users\Miguel\AppData\Local\Temp\flutter_tools.72546657\flutter_tools_chrome_device.3e813039\Default\Site Characteristics Database; recovered 3 files; 631 bytes. Some data may have been lost. ****
+=======
+<<<<<<< Updated upstream
+2023/02/03-23:50:45.023 31a0 Reusing MANIFEST C:\Users\Miguel\AppData\Local\Temp\flutter_tools.17ffbdee\flutter_tools_chrome_device.6fa285a8\Default\Site Characteristics Database/MANIFEST-000001
+2023/02/03-23:50:45.024 31a0 Recovering log #3
+2023/02/03-23:50:45.024 31a0 Reusing old log C:\Users\Miguel\AppData\Local\Temp\flutter_tools.17ffbdee\flutter_tools_chrome_device.6fa285a8\Default\Site Characteristics Database/000003.log 
+=======
+2023/02/03-23:55:39.386 d34 Reusing MANIFEST C:\Users\Miguel\AppData\Local\Temp\flutter_tools.b9820c68\flutter_tools_chrome_device.fd29927f\Default\Site Characteristics Database/MANIFEST-000001
+2023/02/03-23:55:39.388 d34 Recovering log #3
+2023/02/03-23:55:39.389 d34 Reusing old log C:\Users\Miguel\AppData\Local\Temp\flutter_tools.b9820c68\flutter_tools_chrome_device.fd29927f\Default\Site Characteristics Database/000003.log 
+>>>>>>> Stashed changes
+>>>>>>> main
