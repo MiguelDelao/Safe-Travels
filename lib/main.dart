@@ -1,34 +1,25 @@
 import 'package:flutter/material.dart';
-import 'logic.dart';
+import 'package:flutter/services.dart';
+import 'package:safetravels/routes/app_routes.dart';
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]);
+  runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  int index = 0;
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          useMaterial3: true,
-        ),
-        home: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.black,
-            foregroundColor: Colors.white,
-            title: const Text("test"),
-          ),
-          body: Center(),
-        ));
+      theme: ThemeData(
+        visualDensity: VisualDensity.standard,
+      ),
+      title: 'safetravels',
+      initialRoute: AppRoutes.homeLtContainerScreen,
+      routes: AppRoutes.routes,
+    );
   }
 }
