@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:zeus/widgets/navbar.dart';
 import 'package:zeus/core/app_export.dart';
 
-class HomePgScreen extends StatelessWidget {
+class HomePgScreen extends StatefulWidget {
+  @override
+  State<HomePgScreen> createState() => _HomePgScreenState();
+}
+
+class _HomePgScreenState extends State<HomePgScreen> {
+  String countryName = 'England';
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -11,7 +19,7 @@ class HomePgScreen extends StatelessWidget {
         width: size.width,
         child: Column(
           mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
               height: getVerticalSize(
@@ -134,7 +142,7 @@ class HomePgScreen extends StatelessWidget {
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: "The Best Travels, ",
+                            text: "The Safest Travels, ",
                             style: TextStyle(
                               color: ColorConstant.black900,
                               fontSize: getFontSize(
@@ -166,7 +174,7 @@ class HomePgScreen extends StatelessWidget {
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: "The Best Travels, ",
+                            text: "The Safest Travels, ",
                             style: TextStyle(
                               color: ColorConstant.black900,
                               fontSize: getFontSize(
@@ -237,7 +245,7 @@ class HomePgScreen extends StatelessWidget {
                       alignment: Alignment.center,
                       children: [
                         CustomImageView(
-                          imagePath: ImageConstant.imgPexelsphotoby181x360,
+                          url: 'https://countryflagsapi.com/png/' + countryName,
                           height: getVerticalSize(
                             181.00,
                           ),
@@ -288,18 +296,17 @@ class HomePgScreen extends StatelessWidget {
                                       Align(
                                         alignment: Alignment.center,
                                         child: Text(
-                                          "MALAYSIA",
-                                          overflow: TextOverflow.ellipsis,
+                                          countryName,
+                                          overflow: TextOverflow.visible,
                                           textAlign: TextAlign.left,
-                                          style: AppStyle
-                                              .txtPoppinsMedium16WhiteA700,
+                                          style: AppStyle.txtPoppinsMedium15,
                                         ),
                                       ),
                                       Align(
                                         alignment: Alignment.center,
                                         child: Text(
-                                          "MALAYSIA",
-                                          overflow: TextOverflow.ellipsis,
+                                          countryName,
+                                          overflow: TextOverflow.visible,
                                           textAlign: TextAlign.left,
                                           style: AppStyle
                                               .txtPoppinsMedium16WhiteA700,
@@ -448,7 +455,7 @@ class HomePgScreen extends StatelessWidget {
                       gradient: LinearGradient(
                         begin: Alignment(
                           0.5,
-                          0,
+                          4,
                         ),
                         end: Alignment(
                           0.5,
