@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart' as fs;
+import 'package:zeus/SearchBar.dart';
 import 'package:zeus/core/app_export.dart';
 import 'package:zeus/widgets/custom_button.dart';
 
@@ -73,62 +74,31 @@ class SearchPageScreen extends StatelessWidget {
                 ),
               ),
               Container(
-                width: getHorizontalSize(
-                  358.00,
-                ),
-                margin: getMargin(
-                  left: 35,
-                  top: 18,
-                  right: 35,
-                ),
-                padding: getPadding(
-                  left: 0,
-                  top: 0,
-                  right: 0,
-                  bottom: 0,
-                ),
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: fs.Svg(
-                      ImageConstant.imgGroup20,
-                    ),
-                    fit: BoxFit.cover,
+                  width: getHorizontalSize(
+                    358.00,
                   ),
-                ),
-                child: Row(
-                  children: [
-                    CustomImageView(
-                      svgPath: ImageConstant.imgSearch,
-                      height: getSize(
-                        20.00,
+                  margin: getMargin(
+                    left: 35,
+                    top: 18,
+                    right: 35,
+                  ),
+                  padding: getPadding(
+                    left: 0,
+                    top: 0,
+                    right: 0,
+                    bottom: 0,
+                  ),
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: fs.Svg(
+                        ImageConstant.imgGroup20,
                       ),
-                      width: getSize(
-                        20.00,
-                      ),
-                      margin: getMargin(
-                        top: 3,
-                        bottom: 4,
-                      ),
+                      fit: BoxFit.cover,
                     ),
-                    Padding(
-                      padding: getPadding(
-                        left: 10,
-                        right: 220,
-                      ),
-                      child: Text(
-                        "Search ",
-                        overflow: TextOverflow.ellipsis,
-                        textAlign: TextAlign.left,
-                        style: AppStyle.txtPoppinsRegular1825.copyWith(
-                          letterSpacing: getHorizontalSize(
-                            1.09,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+                  ),
+                  child: SearchBar(
+                    onSelect: (p0) {},
+                  )),
               Container(
                 height: getVerticalSize(
                   379.00,
