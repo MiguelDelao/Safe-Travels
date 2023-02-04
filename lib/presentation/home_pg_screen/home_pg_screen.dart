@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:zeus/core/app_export.dart';
 
 class HomePgScreen extends StatelessWidget {
+  String countryName = 'United States';
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -237,7 +239,7 @@ class HomePgScreen extends StatelessWidget {
                       alignment: Alignment.center,
                       children: [
                         CustomImageView(
-                          imagePath: ImageConstant.imgPexelsphotoby181x360,
+                          url: 'https://countryflagsapi.com/png/' + countryName,
                           height: getVerticalSize(
                             181.00,
                           ),
@@ -288,8 +290,8 @@ class HomePgScreen extends StatelessWidget {
                                       Align(
                                         alignment: Alignment.center,
                                         child: Text(
-                                          "MALAYSIA",
-                                          overflow: TextOverflow.ellipsis,
+                                          countryName,
+                                          overflow: TextOverflow.visible,
                                           textAlign: TextAlign.left,
                                           style: AppStyle
                                               .txtPoppinsMedium16WhiteA700,
@@ -298,8 +300,8 @@ class HomePgScreen extends StatelessWidget {
                                       Align(
                                         alignment: Alignment.center,
                                         child: Text(
-                                          "MALAYSIA",
-                                          overflow: TextOverflow.ellipsis,
+                                          countryName,
+                                          overflow: TextOverflow.visible,
                                           textAlign: TextAlign.left,
                                           style: AppStyle
                                               .txtPoppinsMedium16WhiteA700,
