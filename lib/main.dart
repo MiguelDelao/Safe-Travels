@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zeus/searchBar.dart';
 import 'logic.dart';
 
 void main() {
@@ -18,8 +19,8 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    fetchInfo("US");
-    loadJson().then((value) {
+
+    loadCountries().then((value) {
       setState(() {
         _map = value;
       });
@@ -39,17 +40,13 @@ class _MyAppState extends State<MyApp> {
             foregroundColor: Colors.white,
             title: const Text("test"),
           ),
-          body: _map.isEmpty
-              ? Center(child: CircularProgressIndicator())
-              : ListView.builder(
-                  itemCount: _map.length,
-                  itemBuilder: (context, index) {
-                    String country = _map.keys.elementAt(index);
-                    return ListTile(
-                      title: Text(country),
-                    );
-                  },
-                ),
+          body: Column(
+            children: [
+              SearchBar(
+                pressed: (selected) => {print(selected)},
+              ),
+            ],
+          ),
         ));
   }
 }
