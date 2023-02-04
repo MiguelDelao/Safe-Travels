@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vaughn_s_application6/core/app_export.dart';
+import 'package:zeus/core/app_export.dart';
 
 class AppDecoration {
   static BoxDecoration get fillBluegray10072 => BoxDecoration(

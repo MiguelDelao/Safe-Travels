@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vaughn_s_application6/core/app_export.dart';
-import 'package:vaughn_s_application6/widgets/custom_button.dart';
+import 'package:zeus/core/app_export.dart';
+import 'package:zeus/widgets/custom_button.dart';
 
 class HomePgCountryPgScreen extends StatelessWidget {
   @override
