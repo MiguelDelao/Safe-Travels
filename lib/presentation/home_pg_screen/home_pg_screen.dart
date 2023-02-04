@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vaughn_s_application6/widgets/navbar.dart';
-import 'package:vaughn_s_application6/core/app_export.dart';
+import 'package:zeus/core/app_export.dart';
 
 class HomePgScreen extends StatelessWidget {
   @override

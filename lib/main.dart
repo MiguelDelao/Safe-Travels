@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:vaughn_s_application6/presentation/home_pg_screen/home_pg_screen.dart';
-import 'package:vaughn_s_application6/presentation/search_page_screen/search_page_screen.dart';
+import 'package:zeus/presentation/home_pg_screen/home_pg_screen.dart';
+import 'package:zeus/presentation/search_page_screen/search_page_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
