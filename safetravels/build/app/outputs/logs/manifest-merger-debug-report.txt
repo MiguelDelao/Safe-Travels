@@ -1,0 +1,167 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:1:1-47:12
+INJECTED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:1:1-47:12
+INJECTED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:1:1-47:12
+INJECTED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:1:1-47:12
+MERGED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:1:1-47:12
+MERGED from [:sqflite] C:\Users\17705\Documents\GitHub\zeus\safetravels\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:path_provider_android] C:\Users\17705\Documents\GitHub\zeus\safetravels\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\17705\.gradle\caches\transforms-3\10db1fe4e5707ed2ca43e89144ed0f10\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\17705\.gradle\caches\transforms-3\eb870d180274bc69a097957830f91d7e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\17705\.gradle\caches\transforms-3\9ddcf2f72c5335e1f987401e1a28d00f\transformed\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\17705\.gradle\caches\transforms-3\56faf1924dc689b6a1f005795b69d5f9\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\17705\.gradle\caches\transforms-3\7f20beac89fd0c236f9fdb0a5aa43033\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\17705\.gradle\caches\transforms-3\cb6b8e2fa87c344a3e50fa40be0fb6d9\transformed\jetified-activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\17705\.gradle\caches\transforms-3\db2a222ff8bbdc4f07279a981b903bba\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.6.0] C:\Users\17705\.gradle\caches\transforms-3\8a2e74e3f98e846f0780ad1b6ff8554b\transformed\core-1.6.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\17705\.gradle\caches\transforms-3\79b37c1f01105edc4d96ce0ad1f90084\transformed\lifecycle-runtime-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\17705\.gradle\caches\transforms-3\40d23071954e4a5e5fe394de42970aeb\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\17705\.gradle\caches\transforms-3\071a7978413a31835696da94472b5b64\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\17705\.gradle\caches\transforms-3\19f9b7048ce34ad97d0dccad2a653d36\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\17705\.gradle\caches\transforms-3\ddc0646916fd375d3a8adc6d20f5ebf1\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\17705\.gradle\caches\transforms-3\a2f4b433135764c43e1906766cb76627\transformed\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\17705\.gradle\caches\transforms-3\47a2748039695de3f72537f9b6c6e659\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\17705\.gradle\caches\transforms-3\4c9562980e1f94ba69c8a415908433ff\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\17705\.gradle\caches\transforms-3\dc8ad316335b092d0165d841b9de594c\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
+INJECTED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+	package
+		ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:2:5-34
+		INJECTED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\debug\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:1:1-47:12
+		INJECTED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\debug\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:1:1-47:12
+		INJECTED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\debug\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:1:11-69
+application
+ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:8:5-46:19
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\17705\.gradle\caches\transforms-3\eb870d180274bc69a097957830f91d7e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\17705\.gradle\caches\transforms-3\eb870d180274bc69a097957830f91d7e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.core:core:1.6.0] C:\Users\17705\.gradle\caches\transforms-3\8a2e74e3f98e846f0780ad1b6ff8554b\transformed\core-1.6.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.6.0] C:\Users\17705\.gradle\caches\transforms-3\8a2e74e3f98e846f0780ad1b6ff8554b\transformed\core-1.6.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\17705\.gradle\caches\transforms-3\47a2748039695de3f72537f9b6c6e659\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\17705\.gradle\caches\transforms-3\47a2748039695de3f72537f9b6c6e659\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.6.0] C:\Users\17705\.gradle\caches\transforms-3\8a2e74e3f98e846f0780ad1b6ff8554b\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:9:9-36
+	android:icon
+		ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:10:9-43
+activity#com.safetravels.app.MainActivity
+ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:11:9-40:20
+	android:launchMode
+		ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:13:13-43
+	android:hardwareAccelerated
+		ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:16:13-47
+	android:windowSoftInputMode
+		ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:18:13-55
+	android:exported
+		ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:17:13-36
+	android:configChanges
+		ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:15:13-163
+	android:theme
+		ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:14:13-47
+	android:name
+		ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:12:13-41
+meta-data#io.flutter.embedding.android.NormalTheme
+ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:23:13-26:17
+	android:resource
+		ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:25:15-52
+	android:name
+		ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:24:15-70
+meta-data#io.flutter.embedding.android.SplashScreenDrawable
+ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:32:13-35:17
+	android:resource
+		ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:34:15-61
+	android:name
+		ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:33:15-79
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:36:13-39:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:37:17-68
+	android:name
+		ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:37:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:38:17-76
+	android:name
+		ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:38:27-74
+meta-data#flutterEmbedding
+ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:43:9-45:33
+	android:value
+		ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:45:13-30
+	android:name
+		ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml:44:13-44
+uses-sdk
+INJECTED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml
+MERGED from [:sqflite] C:\Users\17705\Documents\GitHub\zeus\safetravels\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:sqflite] C:\Users\17705\Documents\GitHub\zeus\safetravels\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] C:\Users\17705\Documents\GitHub\zeus\safetravels\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] C:\Users\17705\Documents\GitHub\zeus\safetravels\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\17705\.gradle\caches\transforms-3\10db1fe4e5707ed2ca43e89144ed0f10\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\17705\.gradle\caches\transforms-3\10db1fe4e5707ed2ca43e89144ed0f10\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\17705\.gradle\caches\transforms-3\eb870d180274bc69a097957830f91d7e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\17705\.gradle\caches\transforms-3\eb870d180274bc69a097957830f91d7e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\17705\.gradle\caches\transforms-3\9ddcf2f72c5335e1f987401e1a28d00f\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\17705\.gradle\caches\transforms-3\9ddcf2f72c5335e1f987401e1a28d00f\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\17705\.gradle\caches\transforms-3\56faf1924dc689b6a1f005795b69d5f9\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\17705\.gradle\caches\transforms-3\56faf1924dc689b6a1f005795b69d5f9\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\17705\.gradle\caches\transforms-3\7f20beac89fd0c236f9fdb0a5aa43033\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\17705\.gradle\caches\transforms-3\7f20beac89fd0c236f9fdb0a5aa43033\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\17705\.gradle\caches\transforms-3\cb6b8e2fa87c344a3e50fa40be0fb6d9\transformed\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\17705\.gradle\caches\transforms-3\cb6b8e2fa87c344a3e50fa40be0fb6d9\transformed\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\17705\.gradle\caches\transforms-3\db2a222ff8bbdc4f07279a981b903bba\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\17705\.gradle\caches\transforms-3\db2a222ff8bbdc4f07279a981b903bba\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.6.0] C:\Users\17705\.gradle\caches\transforms-3\8a2e74e3f98e846f0780ad1b6ff8554b\transformed\core-1.6.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.6.0] C:\Users\17705\.gradle\caches\transforms-3\8a2e74e3f98e846f0780ad1b6ff8554b\transformed\core-1.6.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\17705\.gradle\caches\transforms-3\79b37c1f01105edc4d96ce0ad1f90084\transformed\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\17705\.gradle\caches\transforms-3\79b37c1f01105edc4d96ce0ad1f90084\transformed\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\17705\.gradle\caches\transforms-3\40d23071954e4a5e5fe394de42970aeb\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\17705\.gradle\caches\transforms-3\40d23071954e4a5e5fe394de42970aeb\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\17705\.gradle\caches\transforms-3\071a7978413a31835696da94472b5b64\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\17705\.gradle\caches\transforms-3\071a7978413a31835696da94472b5b64\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\17705\.gradle\caches\transforms-3\19f9b7048ce34ad97d0dccad2a653d36\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\17705\.gradle\caches\transforms-3\19f9b7048ce34ad97d0dccad2a653d36\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\17705\.gradle\caches\transforms-3\ddc0646916fd375d3a8adc6d20f5ebf1\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\17705\.gradle\caches\transforms-3\ddc0646916fd375d3a8adc6d20f5ebf1\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\17705\.gradle\caches\transforms-3\a2f4b433135764c43e1906766cb76627\transformed\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\17705\.gradle\caches\transforms-3\a2f4b433135764c43e1906766cb76627\transformed\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\17705\.gradle\caches\transforms-3\47a2748039695de3f72537f9b6c6e659\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\17705\.gradle\caches\transforms-3\47a2748039695de3f72537f9b6c6e659\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\17705\.gradle\caches\transforms-3\4c9562980e1f94ba69c8a415908433ff\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\17705\.gradle\caches\transforms-3\4c9562980e1f94ba69c8a415908433ff\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\17705\.gradle\caches\transforms-3\dc8ad316335b092d0165d841b9de594c\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\17705\.gradle\caches\transforms-3\dc8ad316335b092d0165d841b9de594c\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\debug\AndroidManifest.xml
+INJECTED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\debug\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\debug\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\debug\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\debug\AndroidManifest.xml:6:5-66
+	android:name
+		ADDED from C:\Users\17705\Documents\GitHub\zeus\safetravels\android\app\src\debug\AndroidManifest.xml:6:22-64
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\17705\.gradle\caches\transforms-3\eb870d180274bc69a097957830f91d7e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\17705\.gradle\caches\transforms-3\eb870d180274bc69a097957830f91d7e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\17705\.gradle\caches\transforms-3\eb870d180274bc69a097957830f91d7e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\17705\.gradle\caches\transforms-3\eb870d180274bc69a097957830f91d7e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\17705\.gradle\caches\transforms-3\eb870d180274bc69a097957830f91d7e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\17705\.gradle\caches\transforms-3\eb870d180274bc69a097957830f91d7e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
