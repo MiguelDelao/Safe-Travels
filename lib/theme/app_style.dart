@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:safetravels/core/app_export.dart';
+import 'package:vaughn_s_application6/core/app_export.dart';
 
 class AppStyle {
   static TextStyle txtPoppinsMedium18Green600ce = TextStyle(
     color: ColorConstant.green600Ce,
+    fontSize: getFontSize(
+      18,
+    ),
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w500,
+  );
+
+  static TextStyle txtPoppinsMedium18WhiteA700 = TextStyle(
+    color: ColorConstant.whiteA700,
     fontSize: getFontSize(
       18,
     ),
@@ -45,6 +54,15 @@ class AppStyle {
     ),
     fontFamily: 'Poppins',
     fontWeight: FontWeight.w400,
+  );
+
+  static TextStyle txtPoppinsMedium12 = TextStyle(
+    color: ColorConstant.black900,
+    fontSize: getFontSize(
+      12,
+    ),
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w500,
   );
 
   static TextStyle txtPoppinsSemiBold8 = TextStyle(

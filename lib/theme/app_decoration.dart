@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:safetravels/core/app_export.dart';
+import 'package:vaughn_s_application6/core/app_export.dart';
 
 class AppDecoration {
   static BoxDecoration get fillBluegray10072 => BoxDecoration(
@@ -57,6 +57,14 @@ class AppDecoration {
           ],
         ),
       );
+  static BoxDecoration get outlineTeal300 => BoxDecoration(
+        border: Border.all(
+          color: ColorConstant.teal300,
+          width: getHorizontalSize(
+            1.00,
+          ),
+        ),
+      );
   static BoxDecoration get outlineBlack90019 => BoxDecoration(
         color: ColorConstant.whiteA700,
         border: Border.all(
@@ -64,7 +72,7 @@ class AppDecoration {
           width: getHorizontalSize(
             1.00,
           ),
-          strokeAlign: StrokeAlign.outside,
+          //strokeAlign: StrokeAlign.outside,
         ),
       );
   static BoxDecoration get outlineGray40072 => BoxDecoration(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:safetravels/core/app_export.dart';
+import 'package:vaughn_s_application6/core/app_export.dart';
 
 class AppNavigationScreen extends StatelessWidget {
   @override
@@ -50,7 +50,43 @@ class AppNavigationScreen extends StatelessWidget {
                               children: [
                                 GestureDetector(
                                     onTap: () {
-                                      onTapHomeltContainer(context);
+                                      onTapSearchPage(context);
+                                    },
+                                    child: Container(
+                                        width: getHorizontalSize(375.00),
+                                        decoration: AppDecoration.fillWhiteA700,
+                                        child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            children: [
+                                              Align(
+                                                  alignment:
+                                                      Alignment.centerLeft,
+                                                  child: Padding(
+                                                      padding: getPadding(
+                                                          left: 20,
+                                                          top: 10,
+                                                          right: 20,
+                                                          bottom: 10),
+                                                      child: Text("Search Page",
+                                                          overflow: TextOverflow
+                                                              .ellipsis,
+                                                          textAlign:
+                                                              TextAlign.center,
+                                                          style: AppStyle
+                                                              .txtRobotoRegular20))),
+                                              Container(
+                                                  height: getVerticalSize(1.00),
+                                                  width:
+                                                      getHorizontalSize(375.00),
+                                                  margin: getMargin(top: 5),
+                                                  decoration: BoxDecoration(
+                                                      color: ColorConstant
+                                                          .bluegray400))
+                                            ]))),
+                                GestureDetector(
+                                    onTap: () {
+                                      onTapHomePgCountryPg(context);
                                     },
                                     child: Container(
                                         width: getHorizontalSize(375.00),
@@ -69,7 +105,43 @@ class AppNavigationScreen extends StatelessWidget {
                                                           right: 20,
                                                           bottom: 10),
                                                       child: Text(
-                                                          "Home lt - Container",
+                                                          "Home Pg / Country Pg",
+                                                          overflow: TextOverflow
+                                                              .ellipsis,
+                                                          textAlign:
+                                                              TextAlign.center,
+                                                          style: AppStyle
+                                                              .txtRobotoRegular20))),
+                                              Container(
+                                                  height: getVerticalSize(1.00),
+                                                  width:
+                                                      getHorizontalSize(375.00),
+                                                  margin: getMargin(top: 5),
+                                                  decoration: BoxDecoration(
+                                                      color: ColorConstant
+                                                          .bluegray400))
+                                            ]))),
+                                GestureDetector(
+                                    onTap: () {
+                                      onTapHomePg(context);
+                                    },
+                                    child: Container(
+                                        width: getHorizontalSize(375.00),
+                                        decoration: AppDecoration.fillWhiteA700,
+                                        child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            children: [
+                                              Align(
+                                                  alignment:
+                                                      Alignment.centerLeft,
+                                                  child: Padding(
+                                                      padding: getPadding(
+                                                          left: 20,
+                                                          top: 10,
+                                                          right: 20,
+                                                          bottom: 10),
+                                                      child: Text("Home Pg",
                                                           overflow: TextOverflow
                                                               .ellipsis,
                                                           textAlign:
@@ -89,7 +161,15 @@ class AppNavigationScreen extends StatelessWidget {
             ])));
   }
 
-  onTapHomeltContainer(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.homeLtContainerScreen);
+  onTapSearchPage(BuildContext context) {
+    Navigator.pushNamed(context, AppRoutes.searchPageScreen);
+  }
+
+  onTapHomePgCountryPg(BuildContext context) {
+    Navigator.pushNamed(context, AppRoutes.homePgCountryPgScreen);
+  }
+
+  onTapHomePg(BuildContext context) {
+    Navigator.pushNamed(context, AppRoutes.homePgScreen);
   }
 }

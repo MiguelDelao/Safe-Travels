@@ -1,4 +1,4 @@
-name: safetravels
+name: vaughn_s_application6
 description: A new Flutter project.
 version: 1.0.0+1
 environment: 
@@ -21,10 +21,10 @@ flutter:
   fonts: 
     - family: Poppins
       fonts: 
-        - asset: assets/fonts/PoppinsRegular.ttf
-          weight: 400
         - asset: assets/fonts/PoppinsMedium.ttf
           weight: 500
+        - asset: assets/fonts/PoppinsRegular.ttf
+          weight: 400
         - asset: assets/fonts/PoppinsExtraLight.ttf
           weight: 300
         - asset: assets/fonts/PoppinsLight.ttf
