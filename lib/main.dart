@@ -43,7 +43,7 @@ class _MyAppState extends State<MyApp> {
           body: Column(
             children: [
               SearchBar(
-                pressed: (selected) => {print(selected)},
+                onSelect: (selected) => {print(selected)},
               ),
             ],
           ),
