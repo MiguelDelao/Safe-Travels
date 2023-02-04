@@ -4,6 +4,12 @@ import 'package:vaughn_s_application6/core/app_export.dart';
 import 'package:vaughn_s_application6/widgets/custom_button.dart';
 
 class SearchPageScreen extends StatelessWidget {
+  String countryName = 'United States';
+  String population = '3,000,000';
+  String abbreviation = 'USA';
+  String currency = 'USD';
+  String language = 'English';
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -20,21 +26,19 @@ class SearchPageScreen extends StatelessWidget {
               Container(
                 width: size.width,
                 padding: getPadding(
-                  left: 109,
+                  //left: 0,
                   top: 13,
-                  right: 109,
+                  //right: 0,
                   bottom: 13,
                 ),
                 decoration: AppDecoration.outlineBlack90019,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Padding(
-                      padding: getPadding(
-                        top: 22,
-                      ),
+                      padding: getPadding(top: 20),
                       child: RichText(
                         text: TextSpan(
                           children: [
@@ -78,10 +82,10 @@ class SearchPageScreen extends StatelessWidget {
                   right: 35,
                 ),
                 padding: getPadding(
-                  left: 14,
-                  top: 11,
-                  right: 14,
-                  bottom: 11,
+                  left: 0,
+                  top: 0,
+                  right: 0,
+                  bottom: 0,
                 ),
                 decoration: BoxDecoration(
                   image: DecorationImage(
@@ -108,7 +112,7 @@ class SearchPageScreen extends StatelessWidget {
                     ),
                     Padding(
                       padding: getPadding(
-                        left: 17,
+                        left: 10,
                         right: 220,
                       ),
                       child: Text(
@@ -133,7 +137,7 @@ class SearchPageScreen extends StatelessWidget {
                   356.00,
                 ),
                 margin: getMargin(
-                  top: 86,
+                  top: 30,
                 ),
                 child: Stack(
                   alignment: Alignment.topLeft,
@@ -197,7 +201,8 @@ class SearchPageScreen extends StatelessWidget {
                           alignment: Alignment.center,
                           children: [
                             CustomImageView(
-                              imagePath: ImageConstant.imgPexelsphotoby,
+                              url: 'https://countryflagsapi.com/png/' +
+                                  countryName,
                               height: getVerticalSize(
                                 160.00,
                               ),
@@ -210,6 +215,7 @@ class SearchPageScreen extends StatelessWidget {
                                 ),
                               ),
                               alignment: Alignment.center,
+                              border: Border.all(color: Colors.black),
                             ),
                             Align(
                               alignment: Alignment.center,
@@ -225,20 +231,6 @@ class SearchPageScreen extends StatelessWidget {
                                     getHorizontalSize(
                                       15.00,
                                     ),
-                                  ),
-                                  gradient: LinearGradient(
-                                    begin: Alignment(
-                                      0.5,
-                                      0,
-                                    ),
-                                    end: Alignment(
-                                      0.5,
-                                      1,
-                                    ),
-                                    colors: [
-                                      ColorConstant.black90000,
-                                      ColorConstant.black900,
-                                    ],
                                   ),
                                 ),
                               ),
@@ -275,13 +267,20 @@ class SearchPageScreen extends StatelessWidget {
                                 173.00,
                               ),
                               margin: getMargin(
-                                bottom: 6,
+                                bottom: 10,
                               ),
                               child: Text(
-                                "Argentina is a country located in South America, bordered by Chile to the west, Bolivia and Paraguay to the north, Brazil to the northeast, Uruguay and the South Atlantic Ocean.",
+                                "ISO Alpha-3: \n" +
+                                    abbreviation +
+                                    "\nLanguage: \n" +
+                                    language +
+                                    "\nPopulation: \n" +
+                                    population +
+                                    "\nCurrency: \n" +
+                                    currency,
                                 maxLines: null,
                                 textAlign: TextAlign.left,
-                                style: AppStyle.txtPoppinsExtraLight9,
+                                style: AppStyle.txtPoppinsMedium12,
                               ),
                             ),
                           ],
@@ -295,7 +294,7 @@ class SearchPageScreen extends StatelessWidget {
                           bottom: 146,
                         ),
                         child: Text(
-                          "Embassy",
+                          "Safety Information",
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtPoppinsMedium18,
@@ -333,7 +332,7 @@ class SearchPageScreen extends StatelessWidget {
                                           left: 4,
                                         ),
                                         child: Text(
-                                          "Argentina",
+                                          countryName,
                                           overflow: TextOverflow.ellipsis,
                                           textAlign: TextAlign.left,
                                           style: AppStyle.txtPoppinsMedium18,
@@ -397,10 +396,10 @@ class SearchPageScreen extends StatelessWidget {
                                       top: 2,
                                     ),
                                     child: Text(
-                                      "Argentina  ",
+                                      countryName + " ",
                                       overflow: TextOverflow.ellipsis,
                                       textAlign: TextAlign.left,
-                                      style: AppStyle.txtPoppinsMedium16,
+                                      style: AppStyle.txtPoppinsMedium12,
                                     ),
                                   ),
                                 ],
