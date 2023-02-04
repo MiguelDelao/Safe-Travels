@@ -14,6 +14,17 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   int index = 0;
+  Map<String, dynamic> _map = Map<String, dynamic>();
+  @override
+  void initState() {
+    super.initState();
+    fetchInfo("US");
+    loadJson().then((value) {
+      setState(() {
+        _map = value;
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +39,17 @@ class _MyAppState extends State<MyApp> {
             foregroundColor: Colors.white,
             title: const Text("test"),
           ),
-          body: Center(),
+          body: _map.isEmpty
+              ? Center(child: CircularProgressIndicator())
+              : ListView.builder(
+                  itemCount: _map.length,
+                  itemBuilder: (context, index) {
+                    String country = _map.keys.elementAt(index);
+                    return ListTile(
+                      title: Text(country),
+                    );
+                  },
+                ),
         ));
   }
 }
