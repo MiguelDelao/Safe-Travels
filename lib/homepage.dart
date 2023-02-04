@@ -43,7 +43,7 @@ class _CountryCardState extends State<CountryCard> {
           ),
           onPressed: () {
             print('button pressed');
-            getCountryInfo('Australia');
+            getCountryInfo('Austria');
           },
           child: Text('test API'),
         ),
