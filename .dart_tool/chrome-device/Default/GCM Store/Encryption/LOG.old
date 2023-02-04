@@ -1,3 +1,9 @@
+<<<<<<< Updated upstream
 2023/02/03-23:48:59.094 970 Reusing MANIFEST C:\Users\Miguel\AppData\Local\Temp\flutter_tools.d6effd61\flutter_tools_chrome_device.d9cbaf6d\Default\GCM Store\Encryption/MANIFEST-000001
 2023/02/03-23:48:59.095 970 Recovering log #3
 2023/02/03-23:48:59.095 970 Reusing old log C:\Users\Miguel\AppData\Local\Temp\flutter_tools.d6effd61\flutter_tools_chrome_device.d9cbaf6d\Default\GCM Store\Encryption/000003.log 
+=======
+2023/02/03-23:50:55.054 63c Reusing MANIFEST C:\Users\Miguel\AppData\Local\Temp\flutter_tools.17ffbdee\flutter_tools_chrome_device.6fa285a8\Default\GCM Store\Encryption/MANIFEST-000001
+2023/02/03-23:50:55.056 63c Recovering log #3
+2023/02/03-23:50:55.056 63c Reusing old log C:\Users\Miguel\AppData\Local\Temp\flutter_tools.17ffbdee\flutter_tools_chrome_device.6fa285a8\Default\GCM Store\Encryption/000003.log 
+>>>>>>> Stashed changes
