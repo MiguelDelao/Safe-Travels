@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'CountryInfo.dart';
+import 'package:intl/intl.dart';
 
 Future<Map<String, dynamic>> loadCountries() async {
   String jsonString = await rootBundle.loadString('assets/countries.json');
@@ -58,7 +59,9 @@ Future<CountryInfo> getCountryInfo(String country) async {
       if (key == 'population') {
         print('population found successfully');
         int tempPop = value;
-        countryInfo.population = tempPop.toString();
+        var formatter = NumberFormat.decimalPattern();
+        var formattedNumber = formatter.format(tempPop);
+        countryInfo.population = formattedNumber;
       }
       //The following values are located within maps, requiring deeper parsing:
       if (key == 'languages') {
