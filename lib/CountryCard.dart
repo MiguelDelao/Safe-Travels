@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:zeus/CountryInfo.dart';
+import 'package:zeus/presentation/home_pg_country_pg_screen/home_pg_country_pg_screen.dart';
 
 class CountryCard extends StatelessWidget {
   CountryInfo country;
@@ -12,7 +13,9 @@ class CountryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        
+        HomePgCountryScreen(
+          selectedCountry: country,
+        );
       },
       child: Container(
         margin: EdgeInsets.all(5.0),
