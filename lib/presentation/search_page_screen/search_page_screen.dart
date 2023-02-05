@@ -133,6 +133,8 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                   child: SearchBar(
                     onSelect: (countryvalue) {
                       setState(() {
+                        button_text = addToHome;
+                        changed = !changed;
                         showDialog(
                           barrierDismissible: false,
                           builder: (ctx) {
