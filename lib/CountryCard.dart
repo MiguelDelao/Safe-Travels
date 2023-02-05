@@ -54,10 +54,35 @@ class CountryCard extends StatelessWidget {
                   child: Text(
                     country.name,
                     style: TextStyle(
+                      foreground: Paint()
+                      ..strokeWidth = 5
+                      ..style = PaintingStyle.stroke
+                      ..color = Colors.black,
                       fontSize: 32,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
                     ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              height: double.infinity,
+              width: double.infinity,
+              child: Center(
+                child: Container(
+                  alignment: Alignment.center,
+                  child: Text(
+                    country.name,
+                    style: TextStyle(
+                      foreground: Paint()
+                      ..strokeWidth = 5
+                      ..style = PaintingStyle.fill
+                      ..color = Colors.white,
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
                 ),
               ),
