@@ -557,16 +557,19 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                   ],
                 ),
               ),
-              CustomButton(
-                height: 37,
-                width: 119,
-                text: "Add to Home",
-                margin: getMargin(
-                  top: 29,
-                  right: 38,
-                  bottom: 5,
+              InkWell(
+                onTap: () {},
+                child: CustomButton(
+                  height: 37,
+                  width: 119,
+                  text: "Add to Home",
+                  margin: getMargin(
+                    top: 29,
+                    right: 38,
+                    bottom: 5,
+                  ),
+                  alignment: Alignment.centerRight,
                 ),
-                alignment: Alignment.centerRight,
               ),
             ],
           ),
