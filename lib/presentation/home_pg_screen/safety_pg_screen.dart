@@ -16,7 +16,7 @@ class _SafetyPgScreenState extends State<SafetyPgScreen> {
       child: Scaffold(
         backgroundColor: ColorConstant.whiteA700,
         body: Container(
-          color: Colors.blue,
+          color: Color.fromARGB(255, 255, 255, 255),
           width: size.width,
           child: Column(
             mainAxisSize: MainAxisSize.max,
@@ -208,9 +208,7 @@ class _SafetyPgScreenState extends State<SafetyPgScreen> {
                   ],
                 ),
               ),
-              Container(
-                height: 600,
-                color: Colors.yellowAccent,
+              Expanded(
                 child: ListView(
                   children: globals.CountryCards,
                 ),
