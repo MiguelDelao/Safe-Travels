@@ -30,7 +30,7 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         body: Center(
             child: currentIndex == 0
-                ? Container(child: SafetyPgScreen())
+                ? Container(child: HomePgScreen())
                 : Container(
                     child: SearchPageScreen(),
                   )),

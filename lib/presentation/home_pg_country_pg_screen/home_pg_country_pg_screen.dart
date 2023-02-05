@@ -50,6 +50,8 @@ class _HomePageCountryScreenState extends State<HomePgCountryScreen> {
     currency = widget.selectedCountry.currency;
     language = widget.selectedCountry.language;
     advisoryMessage = widget.selectedCountry.advisoryMessage;
+    capital = widget.selectedCountry.capital;
+    score = widget.selectedCountry.advisoryScore;
     super.initState();
   }
 
@@ -59,6 +61,9 @@ class _HomePageCountryScreenState extends State<HomePgCountryScreen> {
       top: false,
       bottom: false,
       child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: ColorConstant.green600Ce,
+        ),
         resizeToAvoidBottomInset: false,
         backgroundColor: ColorConstant.whiteA700,
         body: Container(
