@@ -55,9 +55,9 @@ class CountryCard extends StatelessWidget {
                     country.name,
                     style: TextStyle(
                       foreground: Paint()
-                      ..strokeWidth = 5
-                      ..style = PaintingStyle.stroke
-                      ..color = Colors.black,
+                        ..strokeWidth = 5
+                        ..style = PaintingStyle.stroke
+                        ..color = Colors.black,
                       fontSize: 32,
                       fontWeight: FontWeight.bold,
                     ),
@@ -76,9 +76,9 @@ class CountryCard extends StatelessWidget {
                     country.name,
                     style: TextStyle(
                       foreground: Paint()
-                      ..strokeWidth = 5
-                      ..style = PaintingStyle.fill
-                      ..color = Colors.white,
+                        ..strokeWidth = 5
+                        ..style = PaintingStyle.fill
+                        ..color = Colors.white,
                       fontSize: 32,
                       fontWeight: FontWeight.bold,
                     ),
