@@ -35,15 +35,15 @@ class _MyAppState extends State<MyApp> {
                       CountryCards.remove(CountryCard(
                         country: selectedCountry,
                       ));
-                      CountryCard elementToRemove =
-                          CountryCard(country: selectedCountry);
-                      CountryCards.forEach((element) {
-                        if (element.country.name == selectedCountry.name) {
-                          elementToRemove = element;
+
+                      for (var i = 0; i < CountryCards.length; i++) {
+                        if (CountryCards[i].country.name ==
+                            selectedCountry.name) {
+                          CountryCards.removeAt(i);
+                          print(CountryCards.length);
+                          return;
                         }
-                        CountryCards.remove(elementToRemove);
-                      });
-                      print(CountryCards.length);
+                      }
                     }, passCountry: (selectedCountry) {
                       CountryCards.add(CountryCard(country: selectedCountry));
                       CountryCards.forEach((element) {
