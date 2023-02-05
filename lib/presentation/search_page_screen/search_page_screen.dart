@@ -16,17 +16,18 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
 
   String countryName = 'United States';
 
-  String population = '331,900,000';
+  String population = '329484123';
 
   String abbreviation = 'USA';
 
-  String currency = 'USD';
+  String currency = 'United States dollar';
 
   String language = 'English';
 
-  String advisoryMessage = "";
+  String advisoryMessage =
+      "United States has a current risk level of 2.7(out of 5). We advise: Use some caution when travelling United States.";
 
-  String score = "0";
+  String score = "2.7";
 
   String capital = "Washington, D.C";
 
