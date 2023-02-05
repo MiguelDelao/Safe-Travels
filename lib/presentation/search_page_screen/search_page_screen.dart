@@ -283,7 +283,7 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                                       )
                                     : CustomImageView(
                                         url:
-                                            'https://countryflagsapi.com/png/rus',
+                                            'https://countryflagsapi.com/png/russia',
                                         height: getVerticalSize(
                                           160.00,
                                         ),

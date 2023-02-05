@@ -6,6 +6,7 @@ import 'package:zeus/CountryInfo.dart';
 import 'package:zeus/SearchBar.dart';
 import 'package:zeus/core/app_export.dart';
 import 'package:zeus/logic.dart';
+import 'package:zeus/main.dart';
 import 'package:zeus/widgets/custom_button.dart';
 import 'package:zeus/Globals.dart' as globals;
 import 'package:zeus/CountryCard.dart';
@@ -52,6 +53,9 @@ class _HomePageCountryScreenState extends State<HomePgCountryScreen> {
     advisoryMessage = widget.selectedCountry.advisoryMessage;
     capital = widget.selectedCountry.capital;
     score = widget.selectedCountry.advisoryScore;
+
+    button_text = removeFromHome;
+    changed = true;
     super.initState();
   }
 
@@ -541,32 +545,6 @@ class _HomePageCountryScreenState extends State<HomePgCountryScreen> {
                   ],
                 ),
               ),
-              !changed
-                  ? ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.green.shade600),
-                      child: Text(button_text),
-                      onPressed: () {
-                        setState(() {
-                          button_text = removeFromHome;
-                          changed = !changed;
-
-                          globals.addCountryCard(
-                              CountryCard(country: widget.selectedCountry));
-                        });
-                      })
-                  : ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.red.shade600),
-                      child: Text(button_text),
-                      onPressed: () {
-                        setState(() {
-                          button_text = addToHome;
-                          changed = !changed;
-                          globals.removeCountry(
-                              CountryCard(country: widget.selectedCountry));
-                        });
-                      })
             ],
           ),
         ),
