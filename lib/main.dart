@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zeus/CountryCard.dart';
 import 'package:zeus/logic.dart';
-import 'package:zeus/presentation/home_pg_screen/home_pg_screen.dart';
+import 'package:zeus/presentation/home_pg_screen/safety_pg_screen.dart';
 import 'package:zeus/presentation/search_page_screen/search_page_screen.dart';
 
 void main() {
@@ -29,7 +29,7 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         body: Center(
             child: currentIndex == 0
-                ? Container(child: HomePgScreen())
+                ? Container(child: SafetyPgScreen())
                 : Container(
                     child: SearchPageScreen(),
                   )),
