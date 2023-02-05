@@ -9,14 +9,14 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
-  bool populating = false;
-
   @override
   State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
   int currentIndex = 0;
+
+  List<CountryCard> CountryCards = [];
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,26 @@ class _MyAppState extends State<MyApp> {
             child: currentIndex == 0
                 ? Container(child: HomePgScreen())
                 : Container(
-                    child: SearchPageScreen(),
+                    child: SearchPageScreen(removeCountry: (selectedCountry) {
+                      CountryCards.remove(CountryCard(
+                        country: selectedCountry,
+                      ));
+                      CountryCard elementToRemove =
+                          CountryCard(country: selectedCountry);
+                      CountryCards.forEach((element) {
+                        if (element.country.name == selectedCountry.name) {
+                          elementToRemove = element;
+                        }
+                        CountryCards.remove(elementToRemove);
+                      });
+                      print(CountryCards.length);
+                    }, passCountry: (selectedCountry) {
+                      CountryCards.add(CountryCard(country: selectedCountry));
+                      CountryCards.forEach((element) {
+                        print(element);
+                        print(CountryCards.length);
+                      });
+                    }),
                   )),
         bottomNavigationBar: BottomNavigationBar(
           items: const [

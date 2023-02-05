@@ -25,12 +25,12 @@ Future<CountryInfo> getCountryInfo(String country) async {
   print('getCountries Triggered');
   Map<String, dynamic> countries = await loadCountries();
 
-  if (countries.keys.toList().contains(country)==false) {
+  if (countries.keys.toList().contains(country) == false) {
     throw Exception('Country Not Supported.');
   }
 
   String endpoint = 'https://countryapi.io/api/name/';
-  String apiKey = '?apikey=R8Rm3njYjFiq4NJmDJM7QvoHcKSRvB1We6cSLjpC';
+  String apiKey = '?apikey=TNTlXlE9QCHNUo6SHHHBEs1FD8tHDud2AcL2VXqr';
   Uri uri = Uri.parse(endpoint + country + apiKey);
   final response = await http.get(uri);
   /*print(response.body);*/

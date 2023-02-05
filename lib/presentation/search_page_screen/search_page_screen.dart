@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart' as fs;
 import 'package:zeus/CountryInfo.dart';
@@ -7,6 +9,12 @@ import 'package:zeus/logic.dart';
 import 'package:zeus/widgets/custom_button.dart';
 
 class SearchPageScreen extends StatefulWidget {
+  final Function(CountryInfo) passCountry;
+  final Function(CountryInfo) removeCountry;
+
+  SearchPageScreen(
+      {super.key, required this.passCountry, required this.removeCountry});
+
   @override
   State<SearchPageScreen> createState() => _SearchPageScreenState();
 }
@@ -16,19 +24,25 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
 
   String countryName = 'United States';
 
-  String population = '331,900,000';
+  String population = '329484123';
 
   String abbreviation = 'USA';
 
-  String currency = 'USD';
+  String currency = 'United States dollar';
 
   String language = 'English';
 
-  String advisoryMessage = "";
+  String advisoryMessage =
+      "United States has a current risk level of 2.7(out of 5). We advise: Use some caution when travelling United States.";
 
-  String score = "0";
+  String score = "2.7";
 
   String capital = "Washington, D.C";
+
+  String button_text = "Add to home";
+  String addToHome = "Add to home";
+  String removeFromHome = "Remove from home";
+  bool changed = false;
 
   @override
   Widget build(BuildContext context) {
@@ -309,9 +323,9 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                         ),
                         padding: getPadding(
                           left: 9,
-                          top: 20,
-                          right: 9,
-                          bottom: 20,
+                          top: 0,
+                          right: 10,
+                          bottom: 5,
                         ),
                         decoration: AppDecoration.fillBluegray10072.copyWith(
                           borderRadius: BorderRadiusStyle.roundedBorder15,
@@ -322,23 +336,37 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                           children: [
                             Container(
                               width: getHorizontalSize(
-                                173.00,
+                                180.00,
                               ),
                               margin: getMargin(
-                                bottom: 10,
+                                bottom: 0,
                               ),
-                              child: Text(
-                                "Abbreviation: " +
-                                    abbreviation +
-                                    "\nLanguage: " +
-                                    language +
-                                    "\nPopulation: " +
-                                    population +
-                                    "\nCurrency: " +
+                              child: Column(
+                                children: [
+                                  const Text("Abbreviation: ",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                  Text(abbreviation),
+                                  const Text("Language: ",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                  Text(language),
+                                  const Text("Population: ",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                  Text(population),
+                                  const Text(
+                                    "Currency: ",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                  Text(
                                     currency,
-                                maxLines: null,
-                                textAlign: TextAlign.left,
-                                style: AppStyle.txtPoppinsMedium15,
+                                    maxLines: null,
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ],
                               ),
                             ),
                           ],
@@ -349,7 +377,7 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                       alignment: Alignment.bottomLeft,
                       child: Padding(
                         padding: getPadding(
-                          bottom: 146,
+                          bottom: 150,
                         ),
                         child: Text(
                           "Safety Information",
@@ -364,7 +392,6 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                       child: Padding(
                         padding: getPadding(
                           left: 2,
-                          top: 2,
                         ),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
@@ -435,7 +462,7 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                             Padding(
                               padding: getPadding(
                                 left: 19,
-                                top: 39,
+                                top: 0,
                               ),
                               child: Row(
                                 children: [
@@ -445,7 +472,7 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                                       25.00,
                                     ),
                                     width: getHorizontalSize(
-                                      18.00,
+                                      20.00,
                                     ),
                                   ),
                                   Padding(
@@ -464,7 +491,7 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                                           capital + " ",
                                           overflow: TextOverflow.ellipsis,
                                           textAlign: TextAlign.left,
-                                          style: AppStyle.txtPoppinsMedium12,
+                                          style: AppStyle.txtPoppinsMedium15,
                                         )
                                       ],
                                     ),
@@ -480,14 +507,14 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                       alignment: Alignment.bottomRight,
                       child: Padding(
                         padding: getPadding(
-                          right: 44,
-                          bottom: 81,
+                          right: 20,
+                          bottom: 120,
                         ),
                         child: Text(
                           ("Risk Level: " + score),
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
-                          style: AppStyle.txtPoppinsMedium15,
+                          style: TextStyle(fontWeight: FontWeight.w600),
                         ),
                       ),
                     ),
@@ -503,8 +530,8 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                             ),
                             alignment: Alignment.bottomLeft,
                             margin: getMargin(
-                              left: 152,
-                              bottom: 81,
+                              left: 210,
+                              bottom: 115,
                             ),
                           )
                         : score.compareTo('3') >= 0 && score.compareTo('4') < 0
@@ -519,8 +546,8 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                                 ),
                                 alignment: Alignment.bottomLeft,
                                 margin: getMargin(
-                                  left: 152,
-                                  bottom: 81,
+                                  left: 200,
+                                  bottom: 115,
                                 ),
                               )
                             : score.compareTo('2') >= 0 &&
@@ -536,8 +563,8 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                                     ),
                                     alignment: Alignment.bottomLeft,
                                     margin: getMargin(
-                                      left: 152,
-                                      bottom: 81,
+                                      left: 200,
+                                      bottom: 115,
                                     ),
                                   )
                                 : CustomImageView(
@@ -550,27 +577,37 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                                     ),
                                     alignment: Alignment.bottomLeft,
                                     margin: getMargin(
-                                      left: 152,
-                                      bottom: 81,
+                                      left: 220,
+                                      bottom: 115,
                                     ),
                                   ),
                   ],
                 ),
               ),
-              InkWell(
-                onTap: () {},
-                child: CustomButton(
-                  height: 37,
-                  width: 119,
-                  text: "Add to Home",
-                  margin: getMargin(
-                    top: 29,
-                    right: 38,
-                    bottom: 5,
-                  ),
-                  alignment: Alignment.centerRight,
-                ),
-              ),
+              !changed
+                  ? ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.green.shade600),
+                      child: Text(button_text),
+                      onPressed: () {
+                        setState(() {
+                          button_text = removeFromHome;
+                          changed = !changed;
+
+                          widget.passCountry(selectedCountry);
+                        });
+                      })
+                  : ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.red.shade600),
+                      child: Text(button_text),
+                      onPressed: () {
+                        setState(() {
+                          button_text = addToHome;
+                          changed = !changed;
+                          widget.removeCountry(selectedCountry);
+                        });
+                      })
             ],
           ),
         ),
