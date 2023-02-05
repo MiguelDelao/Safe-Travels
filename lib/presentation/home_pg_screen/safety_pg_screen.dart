@@ -16,12 +16,14 @@ class _SafetyPgScreenState extends State<SafetyPgScreen> {
       child: Scaffold(
         backgroundColor: ColorConstant.whiteA700,
         body: Container(
+          color: Colors.blue,
           width: size.width,
           child: Column(
-            mainAxisSize: MainAxisSize.min,
+            mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Container(
+                color: Colors.green,
                 height: getVerticalSize(
                   100.00,
                 ),
@@ -203,10 +205,14 @@ class _SafetyPgScreenState extends State<SafetyPgScreen> {
                         textAlign: TextAlign.left,
                       ),
                     ),
-                    ListView(
-                      children: globals.CountryCards,
-                    ),
                   ],
+                ),
+              ),
+              Container(
+                height: 600,
+                color: Colors.yellowAccent,
+                child: ListView(
+                  children: globals.CountryCards,
                 ),
               ),
             ],
