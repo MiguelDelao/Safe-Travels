@@ -310,9 +310,9 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                         ),
                         padding: getPadding(
                           left: 9,
-                          top: 20,
-                          right: 9,
-                          bottom: 20,
+                          top: 0,
+                          right: 10,
+                          bottom: 5,
                         ),
                         decoration: AppDecoration.fillBluegray10072.copyWith(
                           borderRadius: BorderRadiusStyle.roundedBorder15,
@@ -323,23 +323,37 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                           children: [
                             Container(
                               width: getHorizontalSize(
-                                173.00,
+                                180.00,
                               ),
                               margin: getMargin(
-                                bottom: 10,
+                                bottom: 0,
                               ),
-                              child: Text(
-                                "Abbreviation: " +
-                                    abbreviation +
-                                    "\nLanguage: " +
-                                    language +
-                                    "\nPopulation: " +
-                                    population +
-                                    "\nCurrency: " +
+                              child: Column(
+                                children: [
+                                  const Text("Abbreviation: ",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                  Text(abbreviation),
+                                  const Text("Language: ",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                  Text(language),
+                                  const Text("Population: ",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                  Text(population),
+                                  const Text(
+                                    "Currency: ",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                  Text(
                                     currency,
-                                maxLines: null,
-                                textAlign: TextAlign.left,
-                                style: AppStyle.txtPoppinsMedium15,
+                                    maxLines: null,
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ],
                               ),
                             ),
                           ],
@@ -350,7 +364,7 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                       alignment: Alignment.bottomLeft,
                       child: Padding(
                         padding: getPadding(
-                          bottom: 146,
+                          bottom: 150,
                         ),
                         child: Text(
                           "Safety Information",
@@ -365,7 +379,6 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                       child: Padding(
                         padding: getPadding(
                           left: 2,
-                          top: 2,
                         ),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
@@ -436,7 +449,7 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                             Padding(
                               padding: getPadding(
                                 left: 19,
-                                top: 39,
+                                top: 0,
                               ),
                               child: Row(
                                 children: [
@@ -446,7 +459,7 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                                       25.00,
                                     ),
                                     width: getHorizontalSize(
-                                      18.00,
+                                      20.00,
                                     ),
                                   ),
                                   Padding(
@@ -465,7 +478,7 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                                           capital + " ",
                                           overflow: TextOverflow.ellipsis,
                                           textAlign: TextAlign.left,
-                                          style: AppStyle.txtPoppinsMedium12,
+                                          style: AppStyle.txtPoppinsMedium15,
                                         )
                                       ],
                                     ),
@@ -481,14 +494,14 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                       alignment: Alignment.bottomRight,
                       child: Padding(
                         padding: getPadding(
-                          right: 44,
-                          bottom: 81,
+                          right: 20,
+                          bottom: 120,
                         ),
                         child: Text(
                           ("Risk Level: " + score),
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
-                          style: AppStyle.txtPoppinsMedium15,
+                          style: TextStyle(fontWeight: FontWeight.w600),
                         ),
                       ),
                     ),
@@ -504,8 +517,8 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                             ),
                             alignment: Alignment.bottomLeft,
                             margin: getMargin(
-                              left: 152,
-                              bottom: 81,
+                              left: 210,
+                              bottom: 115,
                             ),
                           )
                         : score.compareTo('3') >= 0 && score.compareTo('4') < 0
@@ -520,8 +533,8 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                                 ),
                                 alignment: Alignment.bottomLeft,
                                 margin: getMargin(
-                                  left: 152,
-                                  bottom: 81,
+                                  left: 200,
+                                  bottom: 115,
                                 ),
                               )
                             : score.compareTo('2') >= 0 &&
@@ -537,8 +550,8 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                                     ),
                                     alignment: Alignment.bottomLeft,
                                     margin: getMargin(
-                                      left: 152,
-                                      bottom: 81,
+                                      left: 200,
+                                      bottom: 115,
                                     ),
                                   )
                                 : CustomImageView(
@@ -551,8 +564,8 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                                     ),
                                     alignment: Alignment.bottomLeft,
                                     margin: getMargin(
-                                      left: 152,
-                                      bottom: 81,
+                                      left: 220,
+                                      bottom: 115,
                                     ),
                                   ),
                   ],
