@@ -1,15 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart' as fs;
+import 'package:zeus/CountryInfo.dart';
 import 'package:zeus/SearchBar.dart';
 import 'package:zeus/core/app_export.dart';
+import 'package:zeus/logic.dart';
 import 'package:zeus/widgets/custom_button.dart';
 
-class SearchPageScreen extends StatelessWidget {
+class SearchPageScreen extends StatefulWidget {
+  @override
+  State<SearchPageScreen> createState() => _SearchPageScreenState();
+}
+
+class _SearchPageScreenState extends State<SearchPageScreen> {
+  CountryInfo selectedCountry = new CountryInfo();
+
   String countryName = 'United States';
+
   String population = '3,000,000';
+
   String abbreviation = 'USA';
+
   String currency = 'USD';
+
   String language = 'English';
+
+  String advisoryMessage = "";
+
+  String score = "0";
 
   @override
   Widget build(BuildContext context) {
@@ -97,7 +114,36 @@ class SearchPageScreen extends StatelessWidget {
                     ),
                   ),
                   child: SearchBar(
-                    onSelect: (p0) {},
+                    onSelect: (countryvalue) {
+                      setState(() {
+                        showDialog(
+                          barrierDismissible: false,
+                          builder: (ctx) {
+                            return Center(
+                              child: CircularProgressIndicator(
+                                strokeWidth: 2,
+                              ),
+                            );
+                          },
+                          context: context,
+                        );
+                      });
+                      getCountryInfo(countryvalue).then((value) {
+                        setState(() {
+                          selectedCountry = value;
+
+                          countryName = selectedCountry.name;
+                          population = selectedCountry.population;
+                          abbreviation = selectedCountry.alphaCode;
+                          currency = selectedCountry.currency;
+                          language = selectedCountry.language;
+                          advisoryMessage = selectedCountry.advisoryMessage;
+                          score = selectedCountry.advisoryScore;
+
+                          Navigator.of(context).pop();
+                        });
+                      });
+                    },
                   )),
               Container(
                 height: getVerticalSize(
@@ -148,7 +194,7 @@ class SearchPageScreen extends StatelessWidget {
                                 top: 13,
                               ),
                               child: Text(
-                                "Take normal safety precautions.",
+                                advisoryMessage,
                                 overflow: TextOverflow.ellipsis,
                                 textAlign: TextAlign.left,
                                 style: AppStyle.txtPoppinsMedium13,
@@ -240,17 +286,17 @@ class SearchPageScreen extends StatelessWidget {
                                 bottom: 10,
                               ),
                               child: Text(
-                                "ISO Alpha-3: \n" +
+                                "ISO Alpha-3: " +
                                     abbreviation +
-                                    "\nLanguage: \n" +
+                                    "\nLanguage: " +
                                     language +
-                                    "\nPopulation: \n" +
+                                    "\nPopulation: " +
                                     population +
-                                    "\nCurrency: \n" +
+                                    "\nCurrency: " +
                                     currency,
                                 maxLines: null,
                                 textAlign: TextAlign.left,
-                                style: AppStyle.txtPoppinsMedium12,
+                                style: AppStyle.txtPoppinsMedium15,
                               ),
                             ),
                           ],
@@ -387,7 +433,7 @@ class SearchPageScreen extends StatelessWidget {
                           bottom: 81,
                         ),
                         child: Text(
-                          "Safety Rating: 1.2",
+                          ("Safety Rating: " + score),
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtPoppinsMedium15,

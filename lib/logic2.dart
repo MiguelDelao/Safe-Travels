@@ -1,24 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
+import 'package:intl/intl.dart';
 import 'CountryInfo.dart';
-
-Future<Map<String, dynamic>> loadCountries() async {
-  String jsonString = await rootBundle.loadString('/countries.json');
-  Map<String, dynamic> countries = json.decode(jsonString);
-  return countries;
-}
-
-Future<Map<String, dynamic>> fetchCountryAdvisory(String code) async {
-  Uri uu = Uri.parse("https://www.travel-advisory.info/api?countrycode=$code");
-  final response = await http.get(uu);
-  print(response.body);
-
-  Map<String, dynamic> info = json.decode(response.body);
-  info["data"][code]["advisory"]["score"];
-
-  return info;
-}
 
 Future<CountryInfo> getCountryInfo(String country) async {
   print('getCountries Triggered');
@@ -76,28 +60,7 @@ Future<CountryInfo> getCountryInfo(String country) async {
   });
   //Print a summary of information found:
   countryInfo.printAll();
-
-  //ADVISORY FETCH
-  Map<String, dynamic> countries = await loadCountries();
-
-  String countryCode = countries[country];
-  Map<String, dynamic> advisoryContent =
-      await fetchCountryAdvisory(countryCode);
-
-  print(advisoryContent);
-
-  String score =
-      advisoryContent["data"][countryCode]["advisory"]["score"].toString();
-  print(score);
-  countryInfo.advisoryScore = score;
-
-  String advisoryMessage =
-      (advisoryContent["data"][countryCode]["advisory"]["message"]);
-
-  countryInfo.advisoryMessage = advisoryMessage;
-
-  print(countryInfo.advisoryMessage);
-  print(countryInfo.advisoryScore);
-
   return countryInfo;
 } //getCountryInfo
+
+
