@@ -1,6 +1,5 @@
 import 'dart:math';
 
-//DEPRECIATED
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart' as fs;
 import 'package:zeus/CountryInfo.dart';
@@ -8,17 +7,13 @@ import 'package:zeus/SearchBar.dart';
 import 'package:zeus/core/app_export.dart';
 import 'package:zeus/logic.dart';
 import 'package:zeus/widgets/custom_button.dart';
+import 'package:zeus/Globals.dart' as globals;
+import 'package:zeus/CountryCard.dart';
 
 class HomePgCountryScreen extends StatefulWidget {
-  final Function(CountryInfo) passCountry;
-  final Function(CountryInfo) removeCountry;
   final CountryInfo selectedCountry;
 
-  HomePgCountryScreen(
-      {super.key,
-      required this.passCountry,
-      required this.removeCountry,
-      required this.selectedCountry});
+  HomePgCountryScreen({super.key, required this.selectedCountry});
 
   @override
   State<HomePgCountryScreen> createState() => _HomePageCountryScreenState();
@@ -551,7 +546,8 @@ class _HomePageCountryScreenState extends State<HomePgCountryScreen> {
                           button_text = removeFromHome;
                           changed = !changed;
 
-                          widget.passCountry(selectedCountry);
+                          globals.addCountryCard(
+                              CountryCard(country: widget.selectedCountry));
                         });
                       })
                   : ElevatedButton(
@@ -562,7 +558,8 @@ class _HomePageCountryScreenState extends State<HomePgCountryScreen> {
                         setState(() {
                           button_text = addToHome;
                           changed = !changed;
-                          widget.removeCountry(selectedCountry);
+                          globals.removeCountry(
+                              CountryCard(country: widget.selectedCountry));
                         });
                       })
             ],
