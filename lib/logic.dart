@@ -30,7 +30,7 @@ Future<CountryInfo> getCountryInfo(String country) async {
   }
 
   String endpoint = 'https://countryapi.io/api/name/';
-  String apiKey = '?apikey=R8Rm3njYjFiq4NJmDJM7QvoHcKSRvB1We6cSLjpC';
+  String apiKey = '?apikey=OcrEUad7yoyHIz9pxoeupkFqo3VZzcBUe23XL16t';
   Uri uri = Uri.parse(endpoint + country + apiKey);
   final response = await http.get(uri);
   /*print(response.body);*/
