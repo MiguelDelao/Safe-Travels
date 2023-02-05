@@ -24,6 +24,10 @@ Future<CountryInfo> getCountryInfo(String country) async {
   print('getCountries Triggered');
   Map<String, dynamic> countries = await loadCountries();
 
+  if (countries.keys.toList().contains(country)==false) {
+    throw Exception('Country Not Supported.');
+  }
+
   String endpoint = 'https://countryapi.io/api/name/';
   String apiKey = '?apikey=R8Rm3njYjFiq4NJmDJM7QvoHcKSRvB1We6cSLjpC';
   Uri uri = Uri.parse(endpoint + country + apiKey);
@@ -57,15 +61,13 @@ Future<CountryInfo> getCountryInfo(String country) async {
         countryInfo.population = tempPop.toString();
       }
       //The following values are located within maps, requiring deeper parsing:
-      if (key == 'demonyms') {
+      if (key == 'languages') {
+        int temp = 0;
         value.forEach((key, value) {
-          if (key == 'eng') {
-            value.forEach((key, value) {
-              if (key == 'm') {
-                countryInfo.language = value;
-              }
-            });
+          if (temp == 0) {
+            countryInfo.language = value;
           }
+          temp++;
         });
       }
       if (key == 'currencies') {

@@ -129,22 +129,25 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                           context: context,
                         );
                       });
+                      try {
+                        getCountryInfo(countryvalue).then((value) {
+                          setState(() {
+                            selectedCountry = value;
 
-                      getCountryInfo(countryvalue).then((value) {
-                        setState(() {
-                          selectedCountry = value;
+                            countryName = selectedCountry.name;
+                            population = selectedCountry.population;
+                            abbreviation = selectedCountry.alphaCode;
+                            currency = selectedCountry.currency;
+                            language = selectedCountry.language;
+                            advisoryMessage = selectedCountry.advisoryMessage;
+                            score = selectedCountry.advisoryScore;
 
-                          countryName = selectedCountry.name;
-                          population = selectedCountry.population;
-                          abbreviation = selectedCountry.alphaCode;
-                          currency = selectedCountry.currency;
-                          language = selectedCountry.language;
-                          advisoryMessage = selectedCountry.advisoryMessage;
-                          score = selectedCountry.advisoryScore;
-
-                          Navigator.of(context).pop();
+                            Navigator.of(context).pop();
+                          });
                         });
-                      });
+                      } catch (e) {
+                        print('INVALID COUNTRY');
+                      }
                     },
                   )),
               Container(
