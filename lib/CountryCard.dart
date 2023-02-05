@@ -13,8 +13,12 @@ class CountryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        HomePgCountryScreen(
-          selectedCountry: country,
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (BuildContext context) => HomePgCountryScreen(
+              selectedCountry: country,
+            ),
+          ),
         );
       },
       child: Container(
