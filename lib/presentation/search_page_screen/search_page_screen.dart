@@ -128,6 +128,7 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                           context: context,
                         );
                       });
+
                       getCountryInfo(countryvalue).then((value) {
                         setState(() {
                           selectedCountry = value;

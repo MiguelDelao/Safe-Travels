@@ -22,6 +22,8 @@ Future<Map<String, dynamic>> fetchCountryAdvisory(String code) async {
 
 Future<CountryInfo> getCountryInfo(String country) async {
   print('getCountries Triggered');
+  Map<String, dynamic> countries = await loadCountries();
+
   String endpoint = 'https://countryapi.io/api/name/';
   String apiKey = '?apikey=R8Rm3njYjFiq4NJmDJM7QvoHcKSRvB1We6cSLjpC';
   Uri uri = Uri.parse(endpoint + country + apiKey);
@@ -78,7 +80,6 @@ Future<CountryInfo> getCountryInfo(String country) async {
   countryInfo.printAll();
 
   //ADVISORY FETCH
-  Map<String, dynamic> countries = await loadCountries();
 
   String countryCode = countries[country];
   Map<String, dynamic> advisoryContent =
