@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:zeus/core/app_export.dart';
+import 'package:zeus/Globals.dart' as globals;
 
-class HomePgScreen extends StatelessWidget {
+class SafetyPgScreen extends StatefulWidget {
+  @override
+  State<SafetyPgScreen> createState() => _SafetyPgScreenState();
+}
+
+class _SafetyPgScreenState extends State<SafetyPgScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -196,6 +202,9 @@ class HomePgScreen extends StatelessWidget {
                         ),
                         textAlign: TextAlign.left,
                       ),
+                    ),
+                    ListView(
+                      children: globals.CountryCards,
                     ),
                   ],
                 ),

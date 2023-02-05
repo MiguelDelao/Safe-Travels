@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zeus/CountryCard.dart';
 import 'package:zeus/logic.dart';
+import 'package:zeus/presentation/home_pg_screen/safety_pg_screen.dart';
 import 'Globals.dart' as globals;
 import 'package:zeus/presentation/search_page_screen/search_page_screen.dart';
 
@@ -29,28 +30,9 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         body: Center(
             child: currentIndex == 0
-                ? Container(child: safe())
+                ? Container(child: SafetyPgScreen())
                 : Container(
-                    child: SearchPageScreen(removeCountry: (selectedCountry) {
-                      CountryCards.remove(CountryCard(
-                        country: selectedCountry,
-                      ));
-
-                      for (var i = 0; i < CountryCards.length; i++) {
-                        if (CountryCards[i].country.name ==
-                            selectedCountry.name) {
-                          CountryCards.removeAt(i);
-                          print(CountryCards.length);
-                          return;
-                        }
-                      }
-                    }, passCountry: (selectedCountry) {
-                      CountryCards.add(CountryCard(country: selectedCountry));
-                      CountryCards.forEach((element) {
-                        print(element);
-                        print(CountryCards.length);
-                      });
-                    }),
+                    child: SearchPageScreen(),
                   )),
         bottomNavigationBar: BottomNavigationBar(
           items: const [

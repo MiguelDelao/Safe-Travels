@@ -7,13 +7,12 @@ import 'package:zeus/SearchBar.dart';
 import 'package:zeus/core/app_export.dart';
 import 'package:zeus/logic.dart';
 import 'package:zeus/widgets/custom_button.dart';
+import 'package:zeus/Globals.dart' as globals;
+
+import '../../CountryCard.dart';
 
 class SearchPageScreen extends StatefulWidget {
-  final Function(CountryInfo) passCountry;
-  final Function(CountryInfo) removeCountry;
-
-  SearchPageScreen(
-      {super.key, required this.passCountry, required this.removeCountry});
+  SearchPageScreen({super.key});
 
   @override
   State<SearchPageScreen> createState() => _SearchPageScreenState();
@@ -133,6 +132,14 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                   child: SearchBar(
                     onSelect: (countryvalue) {
                       setState(() {
+                        button_text = addToHome;
+                        if (globals.contains(selectedCountry)) {
+                          button_text = removeFromHome;
+                          changed = true;
+                        } else {
+                          button_text = addToHome;
+                          changed = false;
+                        }
                         showDialog(
                           barrierDismissible: false,
                           builder: (ctx) {
@@ -594,7 +601,9 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                           button_text = removeFromHome;
                           changed = !changed;
 
-                          widget.passCountry(selectedCountry);
+                          globals.addCountryCard(CountryCard(
+                            country: selectedCountry,
+                          ));
                         });
                       })
                   : ElevatedButton(
@@ -605,7 +614,8 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                         setState(() {
                           button_text = addToHome;
                           changed = !changed;
-                          widget.removeCountry(selectedCountry);
+                          globals.removeCountry(
+                              CountryCard(country: selectedCountry));
                         });
                       })
             ],
