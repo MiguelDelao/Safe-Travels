@@ -132,14 +132,6 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                   child: SearchBar(
                     onSelect: (countryvalue) {
                       setState(() {
-                        button_text = addToHome;
-                        if (globals.contains(selectedCountry)) {
-                          button_text = removeFromHome;
-                          changed = true;
-                        } else {
-                          button_text = addToHome;
-                          changed = false;
-                        }
                         showDialog(
                           barrierDismissible: false,
                           builder: (ctx) {
@@ -165,6 +157,16 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                           advisoryMessage = selectedCountry.advisoryMessage;
                           score = selectedCountry.advisoryScore;
                           capital = selectedCountry.capital;
+
+                          button_text = addToHome;
+
+                          if (globals.contains(selectedCountry)) {
+                            button_text = removeFromHome;
+                            changed = true;
+                          } else {
+                            button_text = addToHome;
+                            changed = false;
+                          }
 
                           Navigator.of(context).pop();
                         });
