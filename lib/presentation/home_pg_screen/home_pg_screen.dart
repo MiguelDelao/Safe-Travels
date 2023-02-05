@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:zeus/core/app_export.dart';
 
-class HomePgScreen extends StatelessWidget {
+class HomePgScreen extends StatefulWidget {
+  @override
+  State<HomePgScreen> createState() => _HomePgScreenState();
+}
+
+class _HomePgScreenState extends State<HomePgScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(

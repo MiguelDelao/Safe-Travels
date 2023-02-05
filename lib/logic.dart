@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 import 'CountryInfo.dart';
 
 Future<Map<String, dynamic>> loadCountries() async {
-  String jsonString = await rootBundle.loadString('/countries.json');
+  String jsonString = await rootBundle.loadString('assets/countries.json');
   Map<String, dynamic> countries = json.decode(jsonString);
   return countries;
 }

@@ -53,6 +53,7 @@ class _MyAppState extends State<MyApp> {
             });
           },
         ),
+        resizeToAvoidBottomInset: false,
       ),
     );
   }

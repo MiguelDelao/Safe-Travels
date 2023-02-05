@@ -34,6 +34,7 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
       top: false,
       bottom: false,
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: ColorConstant.whiteA700,
         body: Container(
           width: size.width,
