@@ -1,9 +1,9 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
-import 'logic2.dart';
 
 class CountryCard extends StatefulWidget {
-  const CountryCard({super.key});
+  CountryCard({super.key});
 
   @override
   State<CountryCard> createState() => _CountryCardState();
@@ -12,42 +12,49 @@ class CountryCard extends StatefulWidget {
 class _CountryCardState extends State<CountryCard> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          margin: const EdgeInsets.all(8.0),
-          height: 100,
-          decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 184, 199, 206),
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: Row(
-            children: [
-              Container(
-                padding: EdgeInsets.all(4.0),
-                margin: EdgeInsets.all(4.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: Colors.white,
+    return Container(
+      margin: EdgeInsets.all(5.0),
+      padding: EdgeInsets.all(5.0),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        color: Colors.black.withOpacity(.8),
+      ),
+      height: 100,
+      width: double.infinity,
+      child: Stack(
+        children: [
+          Container(
+              height: double.infinity,
+              width: double.infinity,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: ImageFiltered(
+                  imageFilter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+                  child: Image.network(
+                    'https://countryflagsapi.com/png/brazil',
+                    fit: BoxFit.cover,
+                  ),
                 ),
-                child: Image.asset('images/testcat2.jpg'),
+              )),
+          Container(
+            height: double.infinity,
+            width: double.infinity,
+            child: Center(
+              child: Container(
+                alignment: Alignment.center,
+                child: Text(
+                  'Hello World',
+                  style: TextStyle(
+                    fontSize: 32,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
               ),
-              Text('data')
-            ],
+            ),
           ),
-        ),
-        ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            foregroundColor: Colors.white,
-            backgroundColor: Colors.blueGrey,
-          ),
-          onPressed: () {
-            print('button pressed');
-            getCountryInfo('Austria');
-          },
-          child: Text('test API'),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
