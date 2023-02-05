@@ -1,15 +1,13 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:zeus/CountryInfo.dart';
 
-class CountryCard extends StatefulWidget {
-  CountryCard({super.key});
+class CountryCard extends StatelessWidget {
+  CountryInfo country;
 
-  @override
-  State<CountryCard> createState() => _CountryCardState();
-}
+  CountryCard({super.key, required this.country});
 
-class _CountryCardState extends State<CountryCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -31,7 +29,7 @@ class _CountryCardState extends State<CountryCard> {
                 child: ImageFiltered(
                   imageFilter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
                   child: Image.network(
-                    'https://countryflagsapi.com/png/brazil',
+                    'https://countryflagsapi.com/png/' + country.name,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -43,7 +41,7 @@ class _CountryCardState extends State<CountryCard> {
               child: Container(
                 alignment: Alignment.center,
                 child: Text(
-                  'Hello World',
+                  country.name,
                   style: TextStyle(
                     fontSize: 32,
                     fontWeight: FontWeight.bold,
