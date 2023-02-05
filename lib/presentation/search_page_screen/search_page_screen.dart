@@ -31,6 +31,11 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
 
   String capital = "Washington, D.C";
 
+  String button_text = "Add to home";
+  String addToHome = "Add to home";
+  String removeFromHome = "Remove from home";
+  bool changed = false;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -571,17 +576,27 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                   ],
                 ),
               ),
-              CustomButton(
-                height: 37,
-                width: 119,
-                text: "Add to Home",
-                margin: getMargin(
-                  top: 29,
-                  right: 38,
-                  bottom: 5,
-                ),
-                alignment: Alignment.centerRight,
-              ),
+              !changed
+                  ? ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.green.shade600),
+                      child: Text(button_text),
+                      onPressed: () {
+                        setState(() {
+                          button_text = removeFromHome;
+                          changed = !changed;
+                        });
+                      })
+                  : ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.red.shade600),
+                      child: Text(button_text),
+                      onPressed: () {
+                        setState(() {
+                          button_text = addToHome;
+                          changed = !changed;
+                        });
+                      })
             ],
           ),
         ),
