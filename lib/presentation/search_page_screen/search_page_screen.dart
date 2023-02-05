@@ -16,7 +16,7 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
 
   String countryName = 'United States';
 
-  String population = '3,000,000';
+  String population = '331,900,000';
 
   String abbreviation = 'USA';
 
@@ -28,12 +28,15 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
 
   String score = "0";
 
+  String capital = "Washington, D.C";
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       top: false,
       bottom: false,
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: ColorConstant.whiteA700,
         body: Container(
           width: size.width,
@@ -140,6 +143,7 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                           language = selectedCountry.language;
                           advisoryMessage = selectedCountry.advisoryMessage;
                           score = selectedCountry.advisoryScore;
+                          capital = selectedCountry.capital;
 
                           Navigator.of(context).pop();
                         });
@@ -196,7 +200,7 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                               ),
                               child: Text(
                                 advisoryMessage,
-                                overflow: TextOverflow.ellipsis,
+                                overflow: TextOverflow.visible,
                                 textAlign: TextAlign.left,
                                 style: AppStyle.txtPoppinsMedium13,
                               ),
@@ -217,23 +221,60 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                         child: Stack(
                           alignment: Alignment.center,
                           children: [
-                            CustomImageView(
-                              url: 'https://countryflagsapi.com/png/' +
-                                  countryName,
-                              height: getVerticalSize(
-                                160.00,
-                              ),
-                              width: getHorizontalSize(
-                                132.00,
-                              ),
-                              radius: BorderRadius.circular(
-                                getHorizontalSize(
-                                  15.00,
-                                ),
-                              ),
-                              alignment: Alignment.center,
-                              border: Border.all(color: Colors.black),
-                            ),
+                            countryName != "Russia" &&
+                                    countryName != "Republic Of North Macedonia"
+                                ? CustomImageView(
+                                    url: 'https://countryflagsapi.com/png/' +
+                                        countryName,
+                                    height: getVerticalSize(
+                                      160.00,
+                                    ),
+                                    width: getHorizontalSize(
+                                      132.00,
+                                    ),
+                                    radius: BorderRadius.circular(
+                                      getHorizontalSize(
+                                        15.00,
+                                      ),
+                                    ),
+                                    alignment: Alignment.center,
+                                    border: Border.all(color: Colors.black),
+                                  )
+                                : countryName == "Russian Federation"
+                                    ? CustomImageView(
+                                        url:
+                                            'https://countryflagsapi.com/png/rus',
+                                        height: getVerticalSize(
+                                          160.00,
+                                        ),
+                                        width: getHorizontalSize(
+                                          132.00,
+                                        ),
+                                        radius: BorderRadius.circular(
+                                          getHorizontalSize(
+                                            15.00,
+                                          ),
+                                        ),
+                                        alignment: Alignment.center,
+                                        border: Border.all(color: Colors.black),
+                                      )
+                                    : CustomImageView(
+                                        url:
+                                            'https://countryflagsapi.com/png/rus',
+                                        height: getVerticalSize(
+                                          160.00,
+                                        ),
+                                        width: getHorizontalSize(
+                                          132.00,
+                                        ),
+                                        radius: BorderRadius.circular(
+                                          getHorizontalSize(
+                                            15.00,
+                                          ),
+                                        ),
+                                        alignment: Alignment.center,
+                                        border: Border.all(color: Colors.black),
+                                      ),
                             Align(
                               alignment: Alignment.center,
                               child: Container(
@@ -287,7 +328,7 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                                 bottom: 10,
                               ),
                               child: Text(
-                                "ISO Alpha-3: " +
+                                "Abbreviation: " +
                                     abbreviation +
                                     "\nLanguage: " +
                                     language +
@@ -412,11 +453,20 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                                       left: 5,
                                       top: 2,
                                     ),
-                                    child: Text(
-                                      countryName + " ",
-                                      overflow: TextOverflow.ellipsis,
-                                      textAlign: TextAlign.left,
-                                      style: AppStyle.txtPoppinsMedium12,
+                                    child: Column(
+                                      children: [
+                                        Text(
+                                          "Capital:",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        Text(
+                                          capital + " ",
+                                          overflow: TextOverflow.ellipsis,
+                                          textAlign: TextAlign.left,
+                                          style: AppStyle.txtPoppinsMedium12,
+                                        )
+                                      ],
                                     ),
                                   ),
                                 ],
@@ -434,27 +484,76 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                           bottom: 81,
                         ),
                         child: Text(
-                          ("Safety Rating: " + score),
+                          ("Risk Level: " + score),
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtPoppinsMedium15,
                         ),
                       ),
                     ),
-                    CustomImageView(
-                      svgPath: ImageConstant.imgMusic,
-                      height: getVerticalSize(
-                        30.00,
-                      ),
-                      width: getHorizontalSize(
-                        28.00,
-                      ),
-                      alignment: Alignment.bottomLeft,
-                      margin: getMargin(
-                        left: 152,
-                        bottom: 81,
-                      ),
-                    ),
+                    score.compareTo('4') >= 0
+                        ? CustomImageView(
+                            color: Colors.red.shade700,
+                            svgPath: ImageConstant.imgMusic,
+                            height: getVerticalSize(
+                              30.00,
+                            ),
+                            width: getHorizontalSize(
+                              28.00,
+                            ),
+                            alignment: Alignment.bottomLeft,
+                            margin: getMargin(
+                              left: 152,
+                              bottom: 81,
+                            ),
+                          )
+                        : score.compareTo('3') >= 0 && score.compareTo('4') < 0
+                            ? CustomImageView(
+                                color: Colors.amber.shade900,
+                                svgPath: ImageConstant.imgMusic,
+                                height: getVerticalSize(
+                                  30.00,
+                                ),
+                                width: getHorizontalSize(
+                                  28.00,
+                                ),
+                                alignment: Alignment.bottomLeft,
+                                margin: getMargin(
+                                  left: 152,
+                                  bottom: 81,
+                                ),
+                              )
+                            : score.compareTo('2') >= 0 &&
+                                    score.compareTo('3') < 0
+                                ? CustomImageView(
+                                    color: Colors.yellow.shade700,
+                                    svgPath: ImageConstant.imgMusic,
+                                    height: getVerticalSize(
+                                      30.00,
+                                    ),
+                                    width: getHorizontalSize(
+                                      28.00,
+                                    ),
+                                    alignment: Alignment.bottomLeft,
+                                    margin: getMargin(
+                                      left: 152,
+                                      bottom: 81,
+                                    ),
+                                  )
+                                : CustomImageView(
+                                    svgPath: ImageConstant.imgMusic,
+                                    height: getVerticalSize(
+                                      30.00,
+                                    ),
+                                    width: getHorizontalSize(
+                                      28.00,
+                                    ),
+                                    alignment: Alignment.bottomLeft,
+                                    margin: getMargin(
+                                      left: 152,
+                                      bottom: 81,
+                                    ),
+                                  ),
                   ],
                 ),
               ),

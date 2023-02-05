@@ -26,6 +26,7 @@ class _MyAppState extends State<MyApp> {
       ),
       title: 'Zeus',
       home: Scaffold(
+        resizeToAvoidBottomInset: false,
         body: Center(
             child: currentIndex == 0
                 ? Container(child: HomePgScreen())
