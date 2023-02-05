@@ -2,12 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:zeus/core/app_export.dart';
 import 'package:zeus/Globals.dart' as globals;
 
-class SafetyPgScreen extends StatefulWidget {
-  @override
-  State<SafetyPgScreen> createState() => _SafetyPgScreenState();
-}
-
-class _SafetyPgScreenState extends State<SafetyPgScreen> {
+class HomePgScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -92,14 +87,41 @@ class _SafetyPgScreenState extends State<SafetyPgScreen> {
                   ),
                   textAlign: TextAlign.left,
                 ),
-              ),
-              Expanded(
-                child: ListView(
-                  children: globals.CountryCards,
+                RichText(
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: "The Best Travels, ",
+                        style: TextStyle(
+                          color: ColorConstant.black900,
+                          fontSize: getFontSize(
+                            18,
+                          ),
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      TextSpan(
+                        text: "Easily Located",
+                        style: TextStyle(
+                          color: ColorConstant.green600Ce,
+                          fontSize: getFontSize(
+                            18,
+                          ),
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
+                  textAlign: TextAlign.left,
                 ),
-              ),
-            ],
-          ),
+              ],
+            ),
+            Expanded(
+              child: ListView(children: globals.CountryCards),
+            ),
+          ],
         ),
       ),
     );
