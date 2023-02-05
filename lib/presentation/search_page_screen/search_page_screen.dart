@@ -115,6 +115,7 @@ class _SearchPageScreenState extends State<SearchPageScreen> {
                     bottom: 0,
                   ),
                   decoration: BoxDecoration(
+                    border: BorderDirectional(bottom: BorderSide(width: 1.5)),
                     image: DecorationImage(
                       image: fs.Svg(
                         ImageConstant.imgGroup20,
