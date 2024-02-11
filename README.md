@@ -1,6 +1,8 @@
 ## Safe Travels
 
 This project was made for UGA Hacks 8.
+**Please** check out the case study for this project [here](https://www.vaughnmccavey.com/safetravels-project).
+
 SafeTravels assists travelers in planning a secure vacation that minimizes risk of encountering different levels of crime by providing information on searched countries. Each country provides a language, population count, capital, currency, etc. After searching, countries can be added to the home page for future access.
 Clicking on the countries in the home page will take you back to their searched information pages. 
 
